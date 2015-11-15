@@ -1,18 +1,14 @@
-var mongoose = require('mongoose');
+var bookshelf = require('../bookshelf');
 
-var bookModel = mongoose.Schema({
-  title: {
-    type: String
-  },
-  author: {
-    type: String
-  },
-  genre: {
-    type: String
-  },
-  read: {
-    type: Boolean, default: false
-  }
+var Book = bookshelf.Model.extend({
+  tableName: 'books'
 });
 
-module.exports = mongoose.model('Book', bookModel);
+var Books = bookshelf.Collection.extend({
+  model: Book
+});
+
+module.exports = {
+  Book: Book,
+  Books: Books
+};
