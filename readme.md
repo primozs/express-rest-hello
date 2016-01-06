@@ -1,3 +1,5 @@
+# Express rest hello example project for js workshop 
+
 ## mysql version
 - <http://bookshelfjs.org/>
 - <https://github.com/tgriesser/bookshelf>
